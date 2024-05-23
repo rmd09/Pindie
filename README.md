@@ -1,1 +1,1 @@
-## Мой бэкенд [тут](https://pindie-for-admins.nomoredomainswork.ru/)
+## Мой фронтенд [тут](https://pindie-for-admins.nomoredomainswork.ru/)
