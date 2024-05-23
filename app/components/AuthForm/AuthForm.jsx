@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { useStore } from "../../store/app-store";
 
 export const AuthForm = (props) => {
-  const [authData, setAuthData] = useState({ identifier: "", password: "" });
+  const [authData, setAuthData] = useState({ email: "", password: "" }); 
   const [message, setMessage] = useState({ status: null, text: null });
   const authContext = useStore();
   
@@ -21,7 +21,7 @@ export const AuthForm = (props) => {
     const tempData = await authorize(endpoints.auth, authData);
     
     if (isResponseOk(tempData)) {
-      authContext.login(tempData.user, tempData.jwt);
+      authContext.login({...tempData, id: tempData._id}, tempData.jwt); 
       setMessage({ status: "success", text: "Вы авторизовались!" });
     } else {
       setMessage({ status: "error", text: "Неверные почта или пароль" });
@@ -53,7 +53,13 @@ export const AuthForm = (props) => {
       <div className={Styles['form__fields']}>
         <label className={Styles['form__field']}>
           <span className={Styles['form__field-title']}>Email</span>
-          <input name='identifier' onInput={handleInput} className={Styles['form__field-input']} type="email" placeholder="hello@world.com"/>
+          <input
+  onInput={handleInput}
+  className={Styles["form__field-input"]}
+  name="email"
+  type="email"
+  placeholder="hello@world.com"
+/> 
         </label>
         <label className={Styles['form__field']}>
           <span className={Styles['form__field-title']}>Пароль</span>
