@@ -66,11 +66,12 @@ export const AuthForm = (props) => {
           <input name="password" onInput={handleInput} className={Styles['form__field-input']} type="password" placeholder='***********'/>
         </label>
       </div>
-      {message.status ? (
+      {message.status && (
           <p className={Styles["form__message"]}>{message.text}</p>
-      ) : (
-          <p className={Styles["form__message"]}>Ещё нет аккаунта? <span onClick={handleSignUp} className={Styles["form__message-signup"]}>Создайте</span>!</p>
       )}
+      {/* ) : (
+         <p className={Styles["form__message"]}>Ещё нет аккаунта? <span onClick={handleSignUp} className={Styles["form__message-signup"]}>Создайте</span>!</p>
+      )} */} {/*Регистрация через админку */}
       <div className={Styles['form__actions']}>
         <button className={Styles['form__reset']} type="reset">Очистить</button>
         <button className={Styles['form__submit']} type="submit">Войти</button>
