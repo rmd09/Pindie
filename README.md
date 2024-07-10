@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pindie
+Это фонтенд часть проекта Pindie, онлайн каталога игр, созданных студентами курса от Яндекс Практикума. Проект был выполнен в рамках программы [Код Будущего](https://free-code.ru/).
+<br>
+[Здесь](https://github.com/rmd09/Pindie_backend) ты можешь найти бэкенд.
 
-## Getting Started
+## Как запустить
+Чтобы проект заработал, нужно запустить одновременно как фронтенд, так и бэкенд с базой данных. А также установить все необходимые зависимости.
 
-First, run the development server:
+### Необходимые зависимости
+1. [VS Code](https://code.visualstudio.com/download)
+2. [Node.js](https://nodejs.org/en/download/prebuilt-installer)
+3. [MongoDB](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows-unattended/#std-label-install-mdb-community-windows-msiexec), также установите MongoDB Compass (нужно поставить галочку в установщике)
 
+### Запуск проекта
+1. Скачайте фронтенд и бэкенд проекта с GitHub
+2. Откройте обе части проекта в двух разных окнах vs code
+3. [Импортируйте данные в MongoDB](#импорт-данных-mongodb)
+4. [Запустите бэкенд](#запуск-бэкенда)
+5. [Запустите фронтенд](#запуск-фронтенда)
+6. Перейдите по ссылке [http://localhost:3000](http://localhost:3000) (сайт с играми) или по ссылке [http://localhost:3001](http://localhost:3001) (админка)
+
+Также можете посмотреть [список пользователей по умолчанию](docs/users.md), чтобы авторизоваться, вносить изменения, а также создавать новых пользователей, новые игры и категории.
+
+### Импорт данных MongoDB
+1. После установки, откройте MongoDB Compass
+2. Создайте новую базу данных под названием ```pindie``` с папками ```categories```, ```games``` и ```users```
+3. Откройте репозиторий бэкенда и перейдите в папку ```compass-export```
+4. Теперь импортируйте json-файлы в соответствующие папки базы данных
+
+### Запуск бэкенда
+Откройте терминал и запустите соответствующие команды
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+#Установка зависимостей
+npm i
+#Запуск бэкенда
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Запуск фронтенда
+Откройте терминал и запустите соответствующие команды
+```bash
+#Установка зависимостей
+npm i
+#Запуск фронтенда
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Скриншоты
+## Админка
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<img width="90%" src="docs/медиа/админка1.png">
+<br>
+<img width="90%" src="docs/медиа/админка игры1.png">
+<br>
+<img width="90%" src="docs/медиа/админка добавить игру.png">
+<br>
+<img width="90%" src="docs/медиа/админка редактирование.png">
+<br>
+<img width="90%" src="docs/медиа/админка категории и пользователи.png">
 
-## Learn More
+## Сайт Pindie
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="90%" src="docs/медиа/pindie1.png">
+<br>
+<img width="90%" src="docs/медиа/pindie2.png">
+<br>
+<img width="90%" src="docs/медиа/pindie3.png">
+<br>
+<img width="90%" src="docs/медиа/pindie4.png">
